@@ -1,0 +1,30 @@
+[alias]
+    amend = commit --amend
+    rlog = log --pretty=format:\"%h %Cblue%cr%Creset %cn %Cgreen%s%Creset\"
+    sb = show-branch
+
+[merge]
+    tool = vimdiff
+
+[user]
+    email = "sylvain.joyeux@m4x.org"
+    name  = "Sylvain Joyeux"
+
+[rerere]
+    enabled = true
+
+[url "git@github.com:doudou"]
+    insteadOf = git://github.com/doudou
+
+[core]
+    autocrlf = input
+    askpass = /usr/bin/ksshaskpass
+
+[sendemail]
+    smtpencryption = tls
+    smtpserver = smtp.gmail.com
+    smtpuser = doudou.joyeux@gmail.com
+    smtpserverport = 587
+
+[push]
+	default = simple

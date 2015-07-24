@@ -1,0 +1,8 @@
+dev_dir = File.join(Dir.home, 'dev')
+Autoproj.isolate_environment
+
+Autobuild.update_environment '/opt/rock/autoproj'
+Autobuild.update_environment '/opt/rock/autobuild'
+Autoproj.env_set 'AUTOBUILD_CACHE_DIR', '/opt/rock/cache'
+Autobuild::CMake.show_make_messages = true
+

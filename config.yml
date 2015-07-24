@@ -1,0 +1,19 @@
+---
+osdeps_mode: os,gem,pip
+autoproj_use_prerelease: false
+prefix: install
+GITORIOUS_ROOT: https://git.gitorious.org
+GITORIOUS_PUSH_ROOT: 'git@gitorious.org:'
+GITHUB: http,ssh
+GITHUB_ROOT: https://github.com
+GITHUB_PUSH_ROOT: 'git@github.com:'
+ROCK_SELECTED_FLAVOR: master
+ROCK_FLAVOR: master
+ROCK_BRANCH: master
+USE_OCL: false
+rtt_target: gnulinux
+rtt_corba_implementation: omniorb
+GITORIOUS: http,ssh
+ROS_PREFIX: false
+use_autoproj_gem: true
+autoproj_test_utility_default: true
