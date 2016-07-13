@@ -1,0 +1,23 @@
+full_path = File.expand_path(File.dirname(__FILE__))
+basename  = File.basename(full_path)
+
+require_relative '../setup'
+
+Vagrant.configure '2' do |config|
+    puts config.class
+    setup_vagrant(config)
+
+    config.vm.define basename do |box|
+        setup_box(config, basename, box)
+
+        box.vm.provider :libvirt do |libvirt|
+            libvirt.cpus = 4
+            libvirt.memory = 4096
+        end
+
+        box.vm.provision :chef_solo do |chef|
+            setup_chef(config, basename, box, chef)
+        end
+    end
+end
+

@@ -1,0 +1,9 @@
+source 'https://supermarket.chef.io'
+chef_dir = File.expand_path(File.dirname(__FILE__))
+cookbook 'rbenv',
+    github: 'chef-rbenv/chef-rbenv', ref: 'v0.8.1'
+cookbook 'ruby_build',
+    github: 'fnichol/chef-ruby_build', ref: 'v0.8.0'
+cookbook 'autoproj',
+    path: '/home/doudou/dev/vagrant/chef-autoproj'
+    #github: 'Brazilian-Institute-of-Robotics/chef-autoproj'
